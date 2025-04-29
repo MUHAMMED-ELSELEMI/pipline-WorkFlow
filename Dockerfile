@@ -1,0 +1,7 @@
+FROM openjdk:17-alpine
+COPY target/cr-0.0.1-SNAPSHOT.jar ./cr.jar
+EXPOSE 8080
+#ENV SPRING_DATASOURCE_USERNAME=root
+#ENV SPRING_DATASOURCE_PASSWORD=al0957206766
+#ENV SPRING_DATASOURCE_URL=jdbc:mysql://db
+ENTRYPOINT ["java", "-jar", "cr.jar"]
