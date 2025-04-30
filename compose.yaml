@@ -16,8 +16,8 @@ services:
 
   app:
     container_name: 'schoolapp'
-#    image: 'schoolapp'
-    build: .
+    image: 'muhammede/pipline:latest'
+   # build: .
     restart: 'on-failure'
     ports:
       - '8080:8080'
