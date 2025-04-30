@@ -21,7 +21,7 @@ jobs:
         env:
           POSTGRES_DB: cr
           POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: al0957206766
+          POSTGRES_PASSWORD: ${{ secrets.DB_PASSWORD }}
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -33,7 +33,7 @@ jobs:
       DB_PORT: 5432
       DB_NAME: cr
       DB_USER: postgres
-      DB_PASSWORD: your_password
+      DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
 
     steps:
       - name: Checkout source code
