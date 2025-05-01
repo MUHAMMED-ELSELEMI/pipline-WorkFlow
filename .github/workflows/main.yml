@@ -51,7 +51,7 @@ jobs:
       - name: Upload JAR to EC2 server using SCP
         uses: appleboy/scp-action@v0.1.4
         with:
-          host: 13.61.8.195
+          host: ${{ secrets.EC2_HOST }} 
           username: ubuntu
           key: ${{ secrets.EC2_SSH_PRIVATE_KEY }}
           source: "target/cr-0.0.1-SNAPSHOT.jar"
